@@ -13,7 +13,7 @@ public class EmployeeDAO {
     //CREATE
     public void add(Employee emp){
         int size = database.size();
-        int currentId = size <= 0 ? 1 : database.get(size - 1).getId() + 1;
+        int currentId =/*condition*/ size <= 0 ?/*true*/ 1 :/*else*/ database.get(size - 1).getId() + 1;
         
         Employee employee = new Employee(currentId, emp.getName(), emp.getPosition(),emp.getSalary() );
         database.add(employee);
